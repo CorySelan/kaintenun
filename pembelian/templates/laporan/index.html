@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard Laporan</title>
+    <style>
+      /* Atur gaya dasar body */
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f7f7f7; /* Latar belakang abu terang */
+        color: #333333; /* Teks abu gelap */
+        margin: 0;
+        padding: 0;
+      }
+
+      /* Atur gaya untuk header */
+      h1 {
+        text-align: center;
+        color: #ffffff; /* Teks putih */
+        background-color: #427799; /* Warna biru sesuai gambar */
+        padding: 20px 0;
+        margin: 0;
+        border-bottom: 2px solid #5b8eaa; /* Biru sedikit lebih terang */
+      }
+
+      /* Atur gaya untuk panel */
+      .panel {
+        background-color: #ffffff; /* Latar belakang putih */
+        border: 1px solid #ddd; /* Garis abu-abu terang */
+        border-radius: 4px;
+        margin: 20px auto;
+        padding: 15px;
+        max-width: 800px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+      }
+
+      /* Judul panel */
+      .panel h2 {
+        color: #427799; /* Teks biru */
+        font-size: 18px;
+        margin: 0 0 15px;
+        border-bottom: 1px solid #ddd; /* Garis bawah */
+        padding-bottom: 5px;
+        text-align: center; /* Posisikan teks judul di tengah */
+      }
+
+      /* Gaya untuk daftar */
+      ul {
+        list-style: none; /* Hilangkan bullet list */
+        padding: 0;
+        margin: 0;
+        text-align: center; /* Pusatkan daftar */
+      }
+
+      /* Gaya untuk item daftar */
+      li {
+        margin-bottom: 10px; /* Beri jarak antar tombol */
+      }
+
+      /* Gaya untuk link */
+      a {
+        text-decoration: none;
+        color: #ffffff; /* Teks putih */
+        background-color: #5b8eaa; /* Warna biru sedang */
+        padding: 10px 20px;
+        border-radius: 4px;
+        display: inline-block;
+        transition: background-color 0.3s ease;
+        font-size: 16px;
+      }
+
+      a:hover {
+        background-color: #427799; /* Warna biru sesuai gambar saat hover */
+      }
+
+      /* Gaya untuk mobile-friendly */
+      @media (max-width: 600px) {
+        .panel {
+          padding: 10px;
+        }
+
+        h1 {
+          font-size: 20px;
+        }
+
+        a {
+          font-size: 14px; /* Sesuaikan ukuran tombol di layar kecil */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Selamat Datang di Dashboard Laporan</h1>
+    <div class="panel">
+      <h2>Laporan</h2>
+      <ul>
+        <li><a href="/laporan/kain_terjual/">Laporan Kain Terjual</a></li>
+        <li><a href="/laporan/toko_terkunjung/">Laporan Toko Terkunjung</a></li>
+        <li><a href="/laporan/tanggal_terbanyak/">Laporan Tanggal Terbanyak</a></li>
+        <li><a href="/laporan/pekerjaan_terbanyak/">Laporan Pekerjaan Terbanyak</a></li>
+        <li><a href="/laporan/jenis_kelamin_terbanyak/">Laporan Jenis Kelamin Terbanyak</a></li>
+      </ul>
+    </div>
+  </body>
+</html>

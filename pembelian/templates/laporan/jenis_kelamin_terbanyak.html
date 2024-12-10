@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Laporan Jenis Kelamin Terbanyak</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f7f7f7; /* Latar belakang abu terang */
+        color: #333;
+        margin: 0;
+        padding: 0;
+      }
+
+      h1 {
+        text-align: center;
+        color: #ffffff; /* Teks putih */
+        padding: 20px 0;
+        margin: 0;
+        background-color: #427799; /* Biru sesuai gambar */
+        border-bottom: 2px solid #5b8eaa; /* Biru sedikit lebih terang */
+      }
+
+      table {
+        width: 80%;
+        margin: 20px auto;
+        border-collapse: collapse;
+        background-color: #ffffff; /* Latar belakang putih */
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+      }
+
+      th, td {
+        padding: 10px;
+        text-align: center;
+        border: 1px solid #ddd; /* Garis abu terang */
+      }
+
+      th {
+        background-color: #427799; /* Biru header */
+        color: white; /* Teks putih */
+      }
+
+      tr:nth-child(even) {
+        background-color: #f9f9f9; /* Latar belakang strip */
+      }
+
+      tr:hover {
+        background-color: #f1f1f1; /* Latar belakang saat hover */
+      }
+
+      .back-link {
+        display: block;
+        width: 150px;
+        margin: 20px auto;
+        text-decoration: none;
+        background-color: #5b8eaa; /* Biru tombol */
+        color: white; /* Teks putih */
+        padding: 10px 15px;
+        text-align: center;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: background-color 0.3s ease; /* Efek hover */
+      }
+
+      .back-link:hover {
+        background-color: #427799; /* Biru lebih gelap saat hover */
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Laporan Jenis Kelamin Terbanyak</h1>
+
+    <table>
+      <thead>
+        <tr>
+          <th>No</th>
+          <th>Jenis Kelamin</th>
+          <th>Jumlah Pembelian</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for item in jenis_kelamin_terbanyak %}
+        <tr>
+          <td>{{ forloop.counter }}</td>
+          <td>
+            {% if item.jenisKelamin == 'L' %}
+              Laki-laki
+            {% else %}
+              Perempuan
+            {% endif %}
+          </td>
+          <td>{{ item.jumlah_pembelian }}</td>
+        </tr>
+        {% empty %}
+        <tr>
+          <td colspan="3">Tidak ada data tersedia</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
+    <a href="{% url 'index' %}" class="back-link">Kembali ke Dashboard</a>
+  </body>
+</html>
